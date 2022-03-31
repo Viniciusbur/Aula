@@ -14,18 +14,28 @@ public class Main {
     int []vetorIncertion = vetorBubble1;
     int []vetorSelection = vetorBubble1;
 
+       
+        metodos.initClock();
+        metodos.bubbleSort1(vetorBubble1);
+        System.out.println("Tempo Bubble Sort1: " + metodos.getClockSec()
+                +", Numero de iterações "+ metodos.getContBubble1());
+        
+        metodos.initClock();
+        metodos.bubbleSort2(vetorBubble2);
+        System.out.println("Tempo BubbleSort2: " + metodos.getClockSec()
+                +", Numero de iterações "+ metodos.getContBubble2());
+       
+        metodos.initClock();
+        metodos.insertionSort(vetorIncertion);
+        System.out.println("Tempo Incertion sort: " + metodos.getClockSec()
+                +", Numero de iterações "+ metodos.getContIncertion());
+        
+        metodos.initClock();
+        metodos.selection_sort(vetorSelection);
+        System.out.println("Tempo Selection sort: " + metodos.getClockSec()
+                +", Numero de iterações "+ metodos.getContSelection());
 
-    System.out.println(metodos.mostraVetor(vetorBubble1)+
-            "\n" + metodos.mostraVetor(vetorBubble2)+
-            "\n" + metodos.mostraVetor(vetorIncertion)+
-            "\n" + metodos.mostraVetor(vetorSelection));
-
-    metodos.bubbleSort1(vetorBubble1);
-    metodos.bubbleSort2(vetorBubble2);
-    metodos.insertionSort(vetorIncertion);
-    metodos.selection_sort(vetorSelection);
-
-
+/*
     System.out.println("Vetores Ordenados \n Bubble Sort 1"
             + metodos.mostraVetor(vetorBubble1)+
             "\n Numero do contador: "+metodos.getContBubble1() );
@@ -41,6 +51,7 @@ public class Main {
     System.out.println("\n Selection Sort"
             + metodos.mostraVetor(vetorSelection)+
             "\n Numero do contador: "+metodos.getContSelection() );
+            */
 
     }
 }
