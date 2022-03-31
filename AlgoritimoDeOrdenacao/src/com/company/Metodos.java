@@ -5,6 +5,8 @@ import java.util.Random;
 public class Metodos {
 
     private int contBubble1,contBubble2, contIncertion, contSelection;
+    
+    private long tempoIni, tempoFim;
 
     public int getContBubble1() {
         return contBubble1;
@@ -111,6 +113,21 @@ public class Metodos {
                 num[min] = aux;
             }
         }
+    }
+    
+    public void initClock() {
+    tempoIni = tempoFim = System.nanoTime();
+    }
+
+    public double getClockSec() {
+
+        double res;
+
+        tempoFim = System.nanoTime();
+        res = ((double)tempoFim - (double)tempoIni) / (double)1000000000.0;
+
+        return res;
+
     }
 
 
